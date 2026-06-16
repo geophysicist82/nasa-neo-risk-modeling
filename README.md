@@ -127,14 +127,24 @@ anomaly overlays
 
 uncertainty heatmaps
 
-##📈 Expected Findings
-Most NEO flybys are low‑risk and cluster tightly in velocity–distance space
+## 📈 Final Risk Index Visualization
+The plot below illustrates how the combined risk index varies across two of the most physically meaningful features in the dataset:
+log‑scaled relative velocity and log‑scaled miss distance.
 
-A small number of approaches exhibit high velocity, low miss distance, or high uncertainty
+![Final Risk Index Plot](notebooks/final_risk_index_plot.png)
 
-Anomaly detection highlights rare, high‑risk orbital behaviors
+This visualization reveals several important patterns:
 
-Risk scores correlate strongly with size × velocity and uncertainty
+Higher‑risk objects cluster toward higher velocities and smaller miss distances, which aligns with physical intuition — fast, close‑approaching objects pose greater potential danger.
+
+The risk gradient is smooth, indicating that the combined model (supervised + unsupervised + engineered features) produces a coherent, interpretable risk surface rather than noisy or unstable predictions.
+
+Hazardous objects (NASA‑labeled) tend to occupy the upper‑right region of the plot, validating that the model captures meaningful structure in the data.
+
+The distribution also highlights rare, high‑risk outliers, which the anomaly detector helps surface even when labels are sparse.
+
+This figure serves as a high‑level summary of the project’s core insight:
+risk is not driven by a single feature, but by the interaction of velocity, distance, size, and anomaly behavior.
 
 ## 🚀 Future Work
 Build a real‑time NEO risk dashboard
