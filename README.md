@@ -52,28 +52,14 @@ nasa-neo-risk-modeling/
 │   ├── 01_explore_data.ipynb
 │   ├── 02_feature_engineering.ipynb
 │   ├── 03_risk_modeling.ipynb
-│   ├── 04_anomaly_detection.ipynb
+│   ├── 04_risk_indes_and_results.ipynb
 │
 ├── src/
-│   ├── data_loaders.py
+│   ├── data_loader.py
 │   ├── feature_engineering.py
-│   ├── risk_models.py
-│   ├── anomaly_detection.py
-│   ├── utils.py
-│
-├── reports/
-│   ├── figures/
-│   ├── tables/
-│
-├── docs/
-│   ├── project_overview.md
-│   ├── methodology.md
-│   ├── findings.md
-│
-├── tests/
-│   ├── test_data_loaders.py
-│   ├── test_feature_engineering.py
-│
+│   ├── anomaly_model.py
+│   ├── supervised_model.py
+│   ├── risk_index.py
 ├── .gitignore
 └── README.md
 ```
